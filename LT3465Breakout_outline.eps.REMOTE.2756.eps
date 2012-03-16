@@ -1,0 +1,171 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: EAGLE Drawing E:/Documents/eagle/projects/LT3465 Breakout/LT3465Breakout.brd
+%%Creator: EAGLE
+%%Pages: 1
+%%BoundingBox: 0 0 193 293
+%%EndComments
+
+% Coordinate transfer:
+
+/EU { 254 div 0.072 mul } def
+/inch { 72 mul } def
+
+% Linestyle:
+
+1 setlinecap
+1 setlinejoin
+
+% Drawing functions:
+
+/l {  % draw a line
+   /lw exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 EU y1 EU moveto
+   x2 EU y2 EU lineto
+   lw EU setlinewidth
+   stroke
+   } def
+
+/h {  % draw a hole
+   /d  exch def
+   /y  exch def
+   /x  exch def
+   d 0 gt {
+     newpath
+     x EU y EU d 2 div EU 0 360 arc
+     currentgray dup
+     1 exch sub setgray
+     fill
+     setgray
+     } if
+   } def
+
+/b {  % draw a bar
+   /an exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   /w2 x2 x1 sub 2 div EU def
+   /h2 y2 y1 sub 2 div EU def
+   gsave
+   x1 x2 add 2 div EU y1 y2 add 2 div EU translate
+   an rotate
+   newpath
+   w2     h2     moveto
+   w2 neg h2     lineto
+   w2 neg h2 neg lineto
+   w2     h2 neg lineto
+   closepath
+   fill
+   grestore
+   } def
+
+/c {  % draw a circle
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU 0 360 arc
+   stroke
+   } def
+
+/a {  % draw an arc
+   /lc exch def
+   /ae exch def
+   /as exch def
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   lw rd 2 mul gt {
+     /rd rd lw 2 div add 2 div def
+     /lw rd 2 mul def
+     } if
+   currentlinecap currentlinejoin
+   lc setlinecap 0 setlinejoin
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU as ae arc
+   stroke
+   setlinejoin setlinecap
+   } def
+
+/p {  % draw a pie
+   /d exch def
+   /y exch def
+   /x exch def
+   newpath
+   x EU y EU d 2 div EU 0 360 arc
+   fill
+   } def
+
+/edge { 0.20710678119 mul } def
+
+/o {  % draw an octagon
+   /an exch def
+   /dy exch def
+   /dx exch def
+   /y  exch def
+   /x  exch def
+   gsave
+   x EU y EU translate
+   an dx dy lt { 90 add /dx dy /dy dx def def } if rotate
+   newpath
+      0 dx 2 div sub EU                    0 dy edge  add EU moveto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div add EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div add EU lineto
+      0 dx 2 div add EU                    0 dy edge  add EU lineto
+      0 dx 2 div add EU                    0 dy edge  sub EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div sub EU lineto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div sub EU lineto
+      0 dx 2 div sub EU                    0 dy edge  sub EU lineto
+   closepath
+   fill
+   grestore
+   } def
+
+49572 780966 49572 35178 0 l
+53178 35178 3606 0 180.00 270.00 1 a
+53178 31572 545449 31572 0 l
+545449 35695 4123 0 270.00 360.00 1 a
+549572 35695 549572 780449 0 l
+545449 780449 4123 0 0.00 90.00 1 a
+545449 784572 344640 784572 0 l
+344640 780449 4123 0 90.00 163.30 1 a
+340691 781634 332572 754572 0 l
+332572 754572 265572 754572 0 l
+265572 754572 256394 782107 0 l
+252973 780966 3606 0 18.44 90.00 1 a
+252973 784572 53178 784572 0 l
+53178 780966 3606 0 90.00 180.00 1 a
+290172 501772 212172 546772 100 l
+212172 546772 188172 505772 100 l
+290172 501772 266172 459772 100 l
+213172 668772 289172 712772 100 l
+289172 712772 265172 754772 100 l
+213172 668772 188172 711772 100 l
+385172 669772 309172 713772 100 l
+309172 713772 333172 755772 100 l
+385172 669772 409172 711772 100 l
+385172 545772 309172 501772 100 l
+309172 501772 333172 459772 100 l
+385172 545772 409172 503772 100 l
+266172 459772 299172 442772 100 l
+299172 442772 333172 459772 100 l
+409172 503772 445172 523772 100 l
+445172 523772 451172 607772 100 l
+451172 607772 444172 691772 100 l
+444172 691772 409172 711772 100 l
+333172 755772 299172 774772 100 l
+299172 774772 265172 754772 100 l
+188172 711772 153172 691772 100 l
+153172 691772 146172 607772 100 l
+146172 607772 153172 523772 100 l
+153172 523772 188172 505772 100 l
